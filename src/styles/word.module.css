@@ -1,0 +1,31 @@
+/* Container to hold the animation */
+.container {
+  width: 200px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  overflow: hidden; /* Hide overflow to ensure words stay within container */
+  position: absolute; /* Position container */
+}
+
+/* Container for the words */
+.wordcontainer {
+  position: relative; /* Position relative to allow absolute positioning of words */
+  height: 100%; /* Occupy full height of container */
+}
+
+/* Individual word style */
+.word {
+  opacity: 0; /* Initially hide the word */
+  position: absolute; /* Position the word absolutely */
+  bottom: 100%; /* Start the word below the container */
+  left: 0; /* Align the word to the left */
+  width: 100%; /* Occupy full width of container */
+  text-align: center; /* Center-align the text */
+  transition: bottom 0.5s ease, opacity 0.5s ease; /* Smooth transition for visibility and position */
+  font-size: 25px; /* Adjust font size as needed */
+}
+
+/* Class to make the word visible */
+.visible {
+  opacity: 1; /* Make the word fully visible */
+  bottom: 0; /* Move the word to the top of the container */
+}

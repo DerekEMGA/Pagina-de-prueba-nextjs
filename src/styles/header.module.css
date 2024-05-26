@@ -1,0 +1,129 @@
+
+.nav {
+    align-items: center;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    padding: 0; /* Remove any padding */
+    background-image: linear-gradient(to right, #000 65%, #600202, #834112); /* Gradient background from black to red */
+    justify-content: flex-end; /* Align all content to the right */
+}
+
+.navList li {
+    margin-left: 20px;
+    margin-top: 10px; /* Add top margin to list items */
+}
+
+.navList li a:hover {
+    color: #dd5714;
+}
+
+.a {
+    color: rgb(241, 241, 241);
+    text-decoration: none;
+    transition: color 0.5s;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+
+/* Estilo para el botón del menú */
+.menuBtn {
+    display: none; /* Oculta el botón en dispositivos no móviles */
+    align-content: end;
+    
+}
+
+/* Estilos para la lista de navegación oculta */
+.hidden {
+    display: active;
+}
+
+/* Estilos para la lista de navegación activa */
+.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede el área visible */
+}
+
+/* Estilos para el botón de menú */
+.menuBtn {
+    display: none; /* El botón está oculto por defecto en dispositivos de pantalla grande */
+}
+
+/* Estilos adicionales para dispositivos móviles */
+@media (min-width: 320px) and (max-width: 768px) {
+    /* Menú de navegación en pantalla completa */
+    .navList {
+        width: auto;
+        height: auto;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Estilos para los elementos de la lista de navegación */
+    .navList li {
+        margin: 10px 0;
+        width: auto;
+        height: auto;
+    }
+
+    /* Estilos para los enlaces de la lista de navegación */
+    .navList li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        width: auto;
+        height: auto;
+    }
+
+      .menuBtn {
+        display: block;
+    }
+
+
+    .navList.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        width: auto;
+        height: auto;
+    }
+
+    /* Estilos para los elementos de la lista de navegación */
+    .navList.active li {
+        margin: 10px 0;
+        width: auto;
+        height: auto;
+    }
+
+    /* Estilos para los enlaces de la lista de navegación */
+    .navList.active li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        width: auto;
+        height: auto;
+    }
+}

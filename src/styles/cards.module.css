@@ -1,0 +1,109 @@
+/*Cards*/
+.body {
+    background-color: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h2 {
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: row; /* Tarjetas verticales en pantallas grandes */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.containerCard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    width: 200px; /* Tamaño cuadrado fijo para todas las cartas */
+    height: 250px; /* Tamaño cuadrado fijo para todas las cartas */
+    margin: 0px; /* Margen entre las cartas */
+    background: #0a0909;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5%);
+    background: #2fb4cc; /* Cambia el color de fondo al pasar el mouse */
+    color: rgb(0, 0, 0);
+}
+
+.card:hover .contenidocard h3,
+.card:hover .contenidocard p,
+.card:hover .contenidocard a {
+    color: #fff; /* Cambia el color del texto al pasar el mouse */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .contenidocard {
+    flex-grow: 1;
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenidocard h3 {
+    margin-bottom: 15px;
+    color: #7a7a7a;
+}
+
+.card .contenidocard p {
+    line-height: 1.8;
+    color: #6a6a6a;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card .contenidocard a {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    margin-bottom: 5px;
+}
+
+.card .contenidocard a:hover {
+    background: #2fb4cc;
+    color: #fff;
+}
+
+/* En pantallas más pequeñas y en orientación horizontal */
+@media (max-width: 700px) and (orientation: landscape) {
+    .containerCard {
+        flex-direction: row; /* Cambia la dirección del flexbox a horizontal */
+        flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan */
+        overflow-x: auto; /* Permite desplazarse horizontalmente si las tarjetas no caben */
+        width: 100vw; /* Hace que el contenedor ocupe toda la pantalla en horizontal */
+        justify-content: flex-start; /* Alinea las tarjetas al principio */
+    }
+    .card {
+        width: calc(100vw / 3); /* Hace que cada tarjeta ocupe un tercio de la pantalla */
+        height: 250px; /* Tamaño de las tarjetas */
+        margin: 10px; /* Margen entre las tarjetas */
+    }
+}

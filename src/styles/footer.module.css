@@ -1,0 +1,89 @@
+/* Footer.module.css */
+
+/* Light gray background */
+.footer {
+    background-color: rgba(76, 68, 68, 0.854); /* Semi-transparent black background */
+    color: #fff; /* White text color */
+    padding: 40px 0; /* Top and bottom padding */
+    width: 100%; /* Footer spans the entire width of the screen */
+}
+
+/* Container */
+.container {
+    max-width: 1200px; /* Maximum width for content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 20px; /* Adjustments for mobile devices */
+    width: 100%; /* Container spans the entire width of the screen */
+    box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+/* Flexbox to distribute content */
+.footerContent {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Distribute content evenly */
+    flex-wrap: wrap; /* Allow content to wrap */
+    width: 100%; /* Footer content occupies full width */
+    box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+/* Information column */
+.infoColumn {
+    flex: 1; /* Column expands to fill available space */
+    margin-bottom: 20px; /* Bottom margin between columns */
+    padding: 0 10px; /* Adjustments for mobile devices */
+    box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+/* Bottom margin for headings */
+.infoColumn h3 {
+    margin-bottom: 10px; /* Bottom margin for headings */
+}
+
+/* Bottom margin for text */
+.infoColumn p {
+    margin-bottom: 8px; /* Bottom margin for paragraphs */
+}
+
+/* Remove list padding and margin */
+.infoColumn ul {
+    padding: 0; /* Remove list padding */
+    margin: 0; /* Remove list margin */
+}
+
+/* Remove list bullets */
+.infoColumn ul li {
+    list-style: none; /* Remove list bullets */
+}
+
+/* Link color */
+.infoColumn ul li a {
+    color: #333; /* Link color */
+    text-decoration: none; /* Remove link underline */
+}
+
+/* Underline link on hover */
+.infoColumn ul li a:hover {
+    text-decoration: underline; /* Underline link on hover */
+}
+
+/* Media queries for responsiveness */
+
+/* For medium-sized devices (701px - 1120px) */
+@media (min-width: 701px) and (max-width: 1120px) {
+    .container {
+        padding: 0 40px; /* Adjustments for medium-sized devices */
+    }
+    .footerContent .infoColumn {
+        flex: 0 0 50%; /* Each column takes up 50% of the width */
+    }
+}
+
+/* For small devices (up to 700px) */
+@media (max-width: 700px) {
+    .container {
+        padding: 0 0; /* Adjustments for small devices */
+    }
+    .infoColumn {
+        flex: 0 0 100%; /* Each column takes up 100% of the width */
+    }
+}
