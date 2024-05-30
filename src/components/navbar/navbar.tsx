@@ -33,7 +33,7 @@ function Navbar() {
 
   return (
     <nav className={styles.nav}>
-      <Image alt="Logo" src={logo} width={90} height={40} style={{ marginRight: 'auto' }} />
+      <Image alt="Logo" src={logo}  width={90} height={40} style={{ marginRight: 'auto' }} />
       <div className={`${styles.links} ${clicked ? styles.active : ''}`}>
         <a href="#login" onClick={handleLinkClick}>about us</a>
         <a href="#2" onClick={handleLinkClick}>our services</a>
